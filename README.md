@@ -1,17 +1,45 @@
-# React + Vite
+# URL Shortener Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend for the URL Shortener API. Built with Vite, React, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
+[url-shortener-client.vercel.app](https://url-shortener-client.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- JWT authentication with protected routes
+- Shorten any URL instantly from the dashboard
+- Copy short URL to clipboard with one click
+- Per-URL analytics — total clicks, days active, avg clicks/day
+- Click history timeline with timestamps
+- Line chart visualization using Chart.js
 
-## React Compiler
+## Tech Stack
+- React 18 + Vite
+- React Router v6
+- Axios with JWT interceptor
+- React Hook Form
+- Context API for global auth state
+- Tailwind CSS v3
+- Chart.js for analytics visualization
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
+| Page | Route | Description |
+|------|-------|-------------|
+| Login | /login | JWT login |
+| Signup | /signup | Register account |
+| Dashboard | /dashboard | Create and manage short URLs |
+| Analytics | /analytics/:shortId | Click analytics with chart |
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# url-shortener-client" 
+```bash
+git clone https://github.com/krishivperiwal/url-shortener-client
+cd url-shortener-client
+npm install
+npm run dev
+```
+
+Make sure the backend is running on `http://localhost:5000`.
+
+## Backend
+API repo: [url-shortener-api](https://github.com/krishivperiwal/url-shortener-api)
