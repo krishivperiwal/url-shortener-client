@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import api from '../api/axios'
 
-function Signup() {
+function SignUp() {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm()
   const { login, user } = useAuth()
   const navigate = useNavigate()
@@ -89,4 +89,4 @@ function Signup() {
   )
 }
 
-export default Signup
+export default SignUp
